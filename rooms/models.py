@@ -13,7 +13,7 @@ class Room (models.Model):
     details = models.TextField(blank=False)
     type = models.CharField(
         blank=False, 
-        min_length=4, 
+        max_length=20, 
         choices=TYPE_CHOICES
     )
     price = models.FloatField()
