@@ -16,7 +16,4 @@ class Room (models.Model):
         max_length=20, 
         choices=TYPE_CHOICES
     )
-    price = models.FloatField()
-
-    def __init__ (self):
-        return self.type
+    price = models.FloatField(null=False)
