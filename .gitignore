@@ -1,0 +1,11 @@
+# environment variables
+
+.env/
+env/
+.venv/
+venv/
+
+# db files
+
+*sqlite3
+*db
