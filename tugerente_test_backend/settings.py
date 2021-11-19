@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     # local apps
     "rooms",
     "clients",
+    "bookings",
     #django ext
     "django_filters",
 ]
