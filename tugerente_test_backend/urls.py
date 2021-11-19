@@ -20,5 +20,6 @@ urlpatterns = [
     path("rooms/", include(("rooms.urls", "rooms"), namespace="rooms")),
     path("clients/", include(("clients.urls", "clients"), namespace="clients")),
     path("bookings/", include(("bookings.urls", "bookings"), namespace="bookings")),
+    path("invoices/", include(("invoices.urls", "invoices"), namespace="invoices")),
     path('admin/', admin.site.urls),
 ]
