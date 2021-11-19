@@ -2,3 +2,5 @@ djangorestframework
 django
 django-filter
 djangorestframework-jwt
+django-cors-headers
+
