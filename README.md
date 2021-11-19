@@ -19,7 +19,7 @@ El flujo de procesos para realizar la reserva a una habitación es la siguiente:
 2. Inicio de sesión del cliente
 3. Registrar habitaciones
 4. Registrar reservación de habitaciones de clientes
-5. Consultar de facturas generadas
+5. Registrar de facturas
 
 ### **Registro de cliente**
 
@@ -109,3 +109,27 @@ Tambien pueden listarse todas las habitaciones o filtrando por el tipo de habita
 [![Generic badge](https://img.shields.io/static/v1?label=status&message=<POST>&color=green)](https://shields.io/)
 
 `/booking/?room=<ID-HABITACIÓN>`
+
+Payload:
+
+```
+{
+    "stay_days": <Estancia-Días>: Int,
+    "reserved_for": <Fecha-Reservado-Para>: Date,
+    "payment_ammount": <Monto-Pago>: Float
+}
+```
+
+### **Registrar Factura _(Requiere Autenticación)_**
+
+[![Generic badge](https://img.shields.io/static/v1?label=status&message=<POST>&color=green)](https://shields.io/)
+
+`/invoices/?booking_ids=<Ids-Rerservas-Separada-Por-Comas>`
+
+Payload:
+
+```
+{
+    "nit": <Nit-Client>: String
+}
+```
