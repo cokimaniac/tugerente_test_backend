@@ -1,7 +1,12 @@
-from rest_framework import serializers
+#django
+from django.contrib.auth import authenticate
+
+#DRF
+from rest_framework.authtoken.models import Token
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
+#models
 from clients.models import Client
 
 # serializers
@@ -19,3 +24,20 @@ class SignupClientView(APIView):
                 return Response(serialized.data)
             return Response({"error": "Password confirmation failed"}, status=400)
         return Response({ "error": serialized.errors })
+
+class LoginClientView(APIView):
+
+    def post(self, request):
+        email = request.data.get("email")
+        password = request.data.get("password")
+        client = authenticate(username=email, password=password)
+        
+        if not client:
+            return Response({
+                "error": "Login failed"
+            })
+        
+        token, _ = Token.objects.get_or_create(user=client)
+        return Response({
+            "token": token.key
+        })
