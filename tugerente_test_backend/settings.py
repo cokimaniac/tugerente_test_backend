@@ -59,6 +59,10 @@ REST_FRAMEWORK = {
 
 }
 
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000',
+]
+
 AUTH_USER_MODEL = "clients.Client"
 
 MIDDLEWARE = [
@@ -69,6 +73,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #cors
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'tugerente_test_backend.urls'
