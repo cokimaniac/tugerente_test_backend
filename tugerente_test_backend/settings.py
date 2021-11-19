@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     # local apps
     "rooms",
+    "clients",
     #django ext
     "django_filters",
 ]
@@ -48,6 +49,8 @@ INSTALLED_APPS = [
 REST_FRAMEWORK = {
     "DEFAULT_FILTER_BACKENDS": ["django_filters.rest_framework.DjangoFilterBackend"]
 }
+
+AUTH_USER_MODEL = "clients.Client"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
