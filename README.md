@@ -8,6 +8,8 @@ Reserva de habitaciones utilizando Django Rest Framework
 $ python3 -m venv .env
 $ source .env/bin/activate
 (.env) $ pip install -r requirements
+(.env) $ ./manage makemigrations
+(.env) $ ./manage migrate
 (.env) $ ./manage runserver
 ```
 
