@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "rooms",
     "clients",
     "bookings",
+    "invoices",
     #django ext
     "django_filters",
 ]
