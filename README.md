@@ -23,7 +23,7 @@ El flujo de procesos para realizar la reserva a una habitación es la siguiente:
 
 ### **Registro de cliente**
 
-[![Generic badge](https://img.shields.io/static/v1?label=status&message=<POST>&color=green)](https://shields.io/)
+[![Generic badge](https://img.shields.io/static/v1?label=method&message=<POST>&color=green)](https://shields.io/)
 
 `/clients/signup`
 
@@ -41,7 +41,7 @@ Payload:
 
 ### **Inicio de sesión del cliente**
 
-[![Generic badge](https://img.shields.io/static/v1?label=status&message=<POST>&color=green)](https://shields.io/)
+[![Generic badge](https://img.shields.io/static/v1?label=method&message=<POST>&color=green)](https://shields.io/)
 
 `/clients/singin`
 
@@ -71,7 +71,7 @@ _Agregar en el header con el siguiente formato_
 Authorization: "Token <El-Token-Obtenido>"
 ```
 
-[![Generic badge](https://img.shields.io/static/v1?label=status&message=<POST>&color=green)](https://shields.io/)
+[![Generic badge](https://img.shields.io/static/v1?label=method&message=<POST>&color=green)](https://shields.io/)
 
 `/rooms/`
 
@@ -94,19 +94,19 @@ Tambien pueden listarse todas las habitaciones o filtrando por el tipo de habita
 
 **Sin filtro**
 
-[![Generic badge](https://img.shields.io/static/v1?label=status&message=<GET>&color=blue)](https://shields.io/)
+[![Generic badge](https://img.shields.io/static/v1?label=method&message=<GET>&color=blue)](https://shields.io/)
 
 `/rooms/`
 
 **Con filtro**
 
-[![Generic badge](https://img.shields.io/static/v1?label=status&message=<GET>&color=blue)](https://shields.io/)
+[![Generic badge](https://img.shields.io/static/v1?label=method&message=<GET>&color=blue)](https://shields.io/)
 
 `/rooms?type=<Tipo-Habitación>`
 
 ### **Registrar reservación _(Requiere Autenticación)_**
 
-[![Generic badge](https://img.shields.io/static/v1?label=status&message=<POST>&color=green)](https://shields.io/)
+[![Generic badge](https://img.shields.io/static/v1?label=method&message=<POST>&color=green)](https://shields.io/)
 
 `/booking/?room=<ID-HABITACIÓN>`
 
@@ -122,7 +122,7 @@ Payload:
 
 ### **Registrar Factura _(Requiere Autenticación)_**
 
-[![Generic badge](https://img.shields.io/static/v1?label=status&message=<POST>&color=green)](https://shields.io/)
+[![Generic badge](https://img.shields.io/static/v1?label=method&message=<POST>&color=green)](https://shields.io/)
 
 `/invoices/?booking_ids=<Ids-Rerservas-Separada-Por-Comas>`
 
